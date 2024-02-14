@@ -1,17 +1,17 @@
 import { CopyButton } from "@/components/commons/CopyButton";
 import Head from "next/head";
 
-interface ContatoProps {
-    contacts: {
-      name: string;
-      link: string;
-      isMail?: boolean;
-    }[];
-  }
+// interface ContatoProps {
+//     contacts: {
+//       name: string;
+//       link: string;
+//       isMail?: boolean;
+//     }[];
+//   }
 
 
-    const Contato = ({ contacts,link }: ContatoProps) => {
-        console.log(contacts);
+    const Contato = () => {
+        
     return ( 
         <>
             <Head>
@@ -25,21 +25,21 @@ interface ContatoProps {
                         <span className="font-bold">E-mail</span>
                         <div className="flex gap-1 md:gap-3 items-center">
                             <a href="mailto:fagundes.dev@hotmail.com" className="text-sm md:text-lg text-slate-300 underline truncate">fagundes.dev@hotmail.com</a>
-                            <CopyButton textToCopy={link} />
+                            <CopyButton />
                         </div>
                     </li>
                     <li className="md:text-xl">
                         <span className="font-bold">Linkedin</span>
                         <div className="flex gap-1 md:gap-3 items-center">
                             <a href="https://www.linkedin.com/in/paulo-fagundes-dev/" className="text-sm md:text-lg text-slate-300 underline truncate">linkedin.com/in/paulo-fagundes-dev</a>
-                            <CopyButton textToCopy={link} />
+                            <CopyButton />
                         </div>
                     </li>
                     <li className="md:text-xl">
                         <span className="font-bold">GitHub</span>
                         <div className="flex gap-1 md:gap-3 items-center">
                             <a href="https://github.com/paulo0264" className="text-sm md:text-lg text-slate-300 underline truncate">github.com/paulo0264</a>
-                            <CopyButton textToCopy={link} />
+                            <CopyButton />
                         </div>
                     </li>
                 </ul>

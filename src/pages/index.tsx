@@ -23,7 +23,7 @@ const Home = ({ home }: HomeProps) => {
 
       <div className="py-12 px-6 md:px-32 space-y-10 md:space-y-28">
         <AboutMe aboutMe={aboutMe} />
-        <Projects projects={projects} />
+        <Projects />
       </div>
     </>
   );
