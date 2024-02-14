@@ -4,34 +4,9 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-interface ProjectsProps {
-  projects: Project[];
-}
 
-export const Projects = ({ projects }: ProjectsProps) => {
-    const [repositories, setRepositories] = useState([]);
-    const reposToDisplay = ['Lab-Exames', 'App_Barber', 'Meu-Portfolio', 'repo4']; // Adicione os nomes dos repositórios que deseja mostrar
-
-
-  useEffect(() => {
-    const fetchRepositories = async () => {
-      try {
-        const response = await axios.get('https://api.github.com/users/paulo0264/repos', {
-          headers: {
-            Authorization: 'a053dd6c2f9d7641317b'
-          }
-        });
-        // setRepositories(response.data);
-        // Filtrando os repositórios que você deseja mostrar
-        const filteredRepositories = response.data.filter(repo => reposToDisplay.includes(repo.name));
-        setRepositories(filteredRepositories);
-      } catch (error) {
-        console.error('Erro ao obter repositórios:', error);
-      }
-    };
-
-    fetchRepositories();
-  }, []);
+export const Projects = () => {
+    
 
   return (
     <article className="space-y-16 flex flex-col items-center xl:items-start text-center xl:text-left">
