@@ -10,7 +10,7 @@ interface ProjectsProps {
 
 export const Projects = ({ projects }: ProjectsProps) => {
     const [repositories, setRepositories] = useState([]);
-    const reposToDisplay = ['Lab-Exames', 'App_Barber', 'repo3', 'repo4']; // Adicione os nomes dos repositórios que deseja mostrar
+    const reposToDisplay = ['Lab-Exames', 'App_Barber', 'Meu-Portfolio', 'repo4']; // Adicione os nomes dos repositórios que deseja mostrar
 
 
   useEffect(() => {
@@ -37,21 +37,35 @@ export const Projects = ({ projects }: ProjectsProps) => {
     <article className="space-y-16 flex flex-col items-center xl:items-start text-center xl:text-left">
       <h2 className="text-2xl md:text-4xl">Projetos Recentes</h2>
         <ul className="flex flex-wrap gap-16 justify-center xl:justify-start">
-            {repositories.map(repo => (
-            <li className="text-md relative" key={repo.id}>
-            <Image
-              src="/Cadastro.png"
-              alt=""
-              width={300}
-              height={300}
-              className="object-cover rounded-2xl h-[18.75rem] mb-4"
-            />
-            <span className=''>{repo.name}</span>
-            <div className="bg-h-blue-500 rounded-xl w-14 h-14 text-center flex justify-center items-center text-3xl absolute bottom-[1.25rem] -right-[1.25rem]">
-              <span className=''>1</span>
-            </div>
-          </li>
-            ))}
+            
+              <li className="text-md relative">
+                <Image
+                  src="/Cadastro.png"
+                  alt=""
+                  width={300}
+                  height={300}
+                  className="object-cover rounded-2xl h-[10rem] mb-4"
+                />
+                <span className=''>Lab-Exames</span>
+                <div className="bg-h-blue-500 rounded-xl w-14 h-14 text-center flex justify-center items-center text-3xl absolute bottom-[1.25rem] -right-[1.25rem]">
+                  <span className=''>1</span>
+                </div>
+              </li>
+
+              <li className="text-md relative">
+                <Image
+                  src="/barber.png"
+                  alt=""
+                  width={300}
+                  height={300}
+                  className="object-cover rounded-2xl h-[10rem] mb-4"
+                />
+                <span className=''>App-Barber</span>
+                <div className="bg-h-blue-500 rounded-xl w-14 h-14 text-center flex justify-center items-center text-3xl absolute bottom-[1.25rem] -right-[1.25rem]">
+                  <span className=''>2</span>
+                </div>
+              </li>
+           
            
             
         </ul>
